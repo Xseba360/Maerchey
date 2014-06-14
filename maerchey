@@ -92,7 +92,8 @@ M_HOST=$(uname -n)
 M_KERNEL=$(uname -r)
 
 M_UPTIME=$(uptime|cut -d" " -f4-|sed 's/\, *0.*//')
-M_PACKAGES=$(dpkg --get-selections | grep -v deinstall | wc -w)
+M_PACKAGES1=$(dpkg --get-selections | grep -v deinstall | grep -v purge | wc -l)
+M_PACKAGES=$(($M_PACKAGES1+1))
 M_CPU=$(cat /proc/cpuinfo | grep "Hardware" | awk -F: '{print $2}')
 
 M_RAMTOTAL=$(free | grep "Mem" | awk -F: '{print $2}' | awk '{print $1}')
