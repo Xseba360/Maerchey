@@ -10,6 +10,10 @@ Installing
 ----------
 * **As root:**
  * Put the **maerchey** file in **/usr/bin**
+ * In terminal: 
+ ```
+ chmod +x /usr/bin/maerchey
+ ```
  * Open **/etc/profile** in your favourite editor
   * At the end add a line:
   ```
