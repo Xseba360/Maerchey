@@ -14,22 +14,10 @@ Installing
  ```
  chmod +x /usr/bin/maerchey
  ```
- * Open **/etc/profile** in your favourite editor
+ * Open your **shell profile** *(.profile / .bashrc / .zshrc - I don't know which shell do you use!)* in your favourite editor
   * At the end add a line:
   ```
   maerchey
-  ```
-  * My file looks like this:
-  ```
-  # /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
-  # and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
-  
-  export PATH="/usr/bin:/bin"
-  
-  umask 022
-  source /etc/osso-af-init/af-defines.sh
-  maerchey
-
   ```
 * Open your terminal and check if everything works!
 As simple as that.
